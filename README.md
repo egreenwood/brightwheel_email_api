@@ -1,6 +1,6 @@
 ### How to install, and run
 ```
-$ git clone
+$ git clone git@github.com:egreenwood/brighwheel_email_api.git
 $ cd email_api
 $ pip install virtualenvwrapper
 $ workon email_api
