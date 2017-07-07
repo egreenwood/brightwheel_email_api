@@ -1,26 +1,29 @@
-# How to install, and run
+### How to install, and run
+```
 $ git clone
 $ cd email_api
 $ pip install virtualenvwrapper
 $ workon email_api
 $ pip install -f requirements.txt
-
 $ python manage.py runserver
+```
 
-# Mail Server Config
+### Mail Server Config
 configure which mail server is used with the MAIL_SERVER param in email_api/setting.py
 
-# Running tests
+### Running tests
+```
 $ python manage.py test
+```
 
-# Language, framework, and libraries you chose, and why.
-virtualenv: dev environment setup - virtualenv isolates python version and packages from the system, to help minimize requirement/config conflicts when running in different environments
-django, django rest framework: Django is the web framework I am most familiar/comfortable with, it provides quick web app setup
+### Language, framework, and libraries you chose, and why.
+- *virtualenv*: dev environment setup - virtualenv isolates python version and packages from the system, to help minimize requirement/config conflicts when running in different environments
+- *django, django rest framework*: Django is the web framework I am most familiar/comfortable with, it provides quick web app setup
 and DRF viewsets and serializers provide a convenient way to expose a create endpoint and built-in validators for requests, email fields etc.
-sqlite3: minimal db setup to get a working app
-beautifulsoup: a python package that provides convenient html parsing
+- *sqlite3*: minimal db setup to get a working app
+- *beautifulsoup*: a python package that provides convenient html parsing
 
-# Tradeoffs, considerations, next steps, in no particular order
+### Tradeoffs, considerations, next steps, in no particular order
 - 'from' is a reserved word in python, it's probably not great to design code around language specific restrictions,
 but in the case of an internal api where we control input params, using a non-reserved word, eg. 'sender', would simplify the code a bit.
 
