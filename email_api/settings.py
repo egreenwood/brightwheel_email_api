@@ -130,7 +130,7 @@ REST_FRAMEWORK = {
 MAILGUN = 'MAILGUN'
 SENDGRID = 'SENDGRID'
 
-MAIL_SERVER = MAILGUN
+MAIL_SERVER = SENDGRID
 MAIL_CONFIG = {
     MAILGUN: {
         'URL': 'https://api.mailgun.net/v3/sandbox798e2d2bf5af4771a361d76c38b7563c.mailgun.org/messages',
