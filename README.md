@@ -1,6 +1,6 @@
 ### How to install, and run
 ```
-$ git clone git@github.com:egreenwood/brighwheel_email_api.git
+$ git clone git@github.com:egreenwood/brightwheel_email_api.git
 $ cd brightwheel_email_api
 $ pip install virtualenvwrapper
 $ mkvirtualenv email_api
