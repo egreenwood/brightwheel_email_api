@@ -11,6 +11,9 @@ https://docs.djangoproject.com/en/1.11/ref/settings/
 """
 
 import os
+import environ
+env = environ.Env(DEBUG=(bool, False),)
+environ.Env.read_env()
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -134,10 +137,10 @@ MAIL_SERVER = SENDGRID
 MAIL_CONFIG = {
     MAILGUN: {
         'URL': 'https://api.mailgun.net/v3/sandbox798e2d2bf5af4771a361d76c38b7563c.mailgun.org/messages',
-        'API_KEY': 'key-eabd3e518fabc693247b947cf3c92a65'
+        'API_KEY': env('MAILGUN_API_KEY')
     },
     SENDGRID: {
         'URL': 'https://api.sendgrid.com/v3/mail/send',
-        'API_KEY': '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'
+        'API_KEY': env('SENDGRID_API_KEY')
     },
 }

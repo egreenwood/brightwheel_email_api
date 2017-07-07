@@ -5,9 +5,21 @@ $ cd brightwheel_email_api
 $ pip install virtualenvwrapper
 $ mkvirtualenv email_api
 $ pip install -r requirements.txt
-# python manage.py migrate
+$ python manage.py migrate
+```
+
+put Api keys for the mailservers into a .env file in the email_api/ directory, with the format:
+```
+MAILGUN_API_KEY=exampleApiKey
+SENDGRID_API_KEY=exampleApiKey
+```
+
+run the server
+```
 $ python manage.py runserver
 ```
+the app should be running at localhost:8000
+POST requests can be made to localhost:8000/email
 
 ### Mail Server Config
 configure which mail server is used with the MAIL_SERVER param in email_api/setting.py
